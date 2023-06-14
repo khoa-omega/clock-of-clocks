@@ -12,10 +12,10 @@ private const val RADIAN_PER_MINUTE = PI / 30
 enum class Clock(hour: Int, minute: Int) {
     TOP_LEFT(3, 30),
     TOP_RIGHT(6, 45),
-    BOTTOM_LEFT(12, 15),
-    BOTTOM_RIGHT(12, 45),
+    BOTTOM_LEFT(0, 15),
+    BOTTOM_RIGHT(0, 45),
     HORIZONTAL(3, 45),
-    VERTICAL(12, 30),
+    VERTICAL(0, 30),
     EMPTY(7, 35);
 
     val hourRadian = hour * RADIAN_PER_HOUR
