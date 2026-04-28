@@ -32,8 +32,8 @@ android {
         applicationId = "io.github.komega.clockofclocks"
         minSdk = 31
         targetSdk = 37
-        versionCode = 20260401
-        versionName = "2026.04.01"
+        versionCode = 20260428
+        versionName = "2026.04.28"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -73,6 +73,7 @@ android {
 
     lint {
         checkAllWarnings = true
+        sarifReport = true
         disable += "Instantiatable"
     }
 }
