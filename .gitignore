@@ -1,0 +1,20 @@
+# MacOS desktop services store
+.DS_Store
+
+# Gradle cache
+.gradle
+
+# Android Studio project
+.idea/*
+!.idea/codeStyles
+!.idea/copyright
+!.idea/icon.svg
+
+# Kotlin cache
+.kotlin
+
+# Build output
+build
+
+# Local configuration (SDK path, etc)
+local.properties

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright 2025 Khoa Omega
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <group
+        android:scaleX="0.73333335"
+        android:scaleY="0.73333335"
+        android:translateX="6.4"
+        android:translateY="6.4">
+        <path android:pathData="M24,24m-20,0a20,20 0,1 1,40 0a20,20 0,1 1,-40 0">
+            <aapt:attr name="android:fillColor">
+                <gradient
+                    android:endX="38.142"
+                    android:endY="38.142"
+                    android:startX="9.858"
+                    android:startY="9.858"
+                    android:type="linear">
+                    <item
+                        android:color="#FF889097"
+                        android:offset="0" />
+                    <item
+                        android:color="#FF64717C"
+                        android:offset="1" />
+                </gradient>
+            </aapt:attr>
+        </path>
+        <path android:pathData="M24,24m-18.5,0a18.5,18.5 0,1 1,37 0a18.5,18.5 0,1 1,-37 0">
+            <aapt:attr name="android:fillColor">
+                <gradient
+                    android:centerX="24"
+                    android:centerY="24"
+                    android:gradientRadius="18.5"
+                    android:type="radial">
+                    <item
+                        android:color="#FF000000"
+                        android:offset="0" />
+                    <item
+                        android:color="#00000000"
+                        android:offset="1" />
+                </gradient>
+            </aapt:attr>
+        </path>
+        <path android:pathData="M24,24m-17,0a17,17 0,1 1,34 0a17,17 0,1 1,-34 0">
+            <aapt:attr name="android:fillColor">
+                <gradient
+                    android:centerX="23.89"
+                    android:centerY="7.394"
+                    android:gradientRadius="37.883"
+                    android:type="radial">
+                    <item
+                        android:color="#FFFAFAFB"
+                        android:offset="0" />
+                    <item
+                        android:color="#FFC8CDD1"
+                        android:offset="1" />
+                </gradient>
+            </aapt:attr>
+        </path>
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M24,24L24,36"
+            android:strokeWidth="1.5"
+            android:strokeColor="#d83b01"
+            android:strokeLineCap="round" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M24,24L32.485,15.515"
+            android:strokeWidth="1.5"
+            android:strokeColor="#45494d"
+            android:strokeLineCap="round" />
+        <path
+            android:fillColor="#00000000"
+            android:pathData="M24,24L16.213,20.265"
+            android:strokeWidth="2.5"
+            android:strokeColor="#45494d"
+            android:strokeLineCap="round" />
+        <path
+            android:fillColor="#1e2021"
+            android:pathData="M24,24m-2,0a2,2 0,1 1,4 0a2,2 0,1 1,-4 0" />
+    </group>
+</vector>
