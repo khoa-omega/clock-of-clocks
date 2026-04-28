@@ -14,6 +14,9 @@
  * limitations under the License.
  */
 
+import java.io.FileInputStream
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.compose.compiler)
@@ -21,7 +24,9 @@ plugins {
 
 android {
     namespace = "io.github.komega.clockofclocks"
-    compileSdk = 37
+    compileSdk {
+        version = release(37)
+    }
 
     defaultConfig {
         applicationId = "io.github.komega.clockofclocks"
@@ -33,6 +38,18 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        create("release") {
+            val keystore = file("keystore.properties")
+            val properties = Properties()
+            FileInputStream(keystore).use(properties::load)
+            storeFile = file(properties["storeFile"] as String)
+            storePassword = properties["storePassword"] as String
+            keyAlias = properties["keyAlias"] as String
+            keyPassword = properties["keyPassword"] as String
+        }
+    }
+
     buildTypes {
         debug {
             applicationIdSuffix = ".debug"
@@ -41,6 +58,7 @@ android {
         release {
             isMinifyEnabled = true
             isShrinkResources = true
+            signingConfig = signingConfigs.findByName("release")
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -51,6 +69,11 @@ android {
     androidResources {
         @Suppress("UnstableApiUsage")
         localeFilters += "en"
+    }
+
+    lint {
+        checkAllWarnings = true
+        disable += "Instantiatable"
     }
 }
 
@@ -63,6 +86,7 @@ dependencies {
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
+    implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(platform(libs.androidx.compose.bom))
 
     debugImplementation(libs.androidx.compose.ui.tooling)

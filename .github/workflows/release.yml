@@ -37,15 +37,20 @@ jobs:
       - name: Setup android
         uses: android-actions/setup-android@v4
 
+      - name: Decode keystore
+        run: |
+          printf "%s" "${{ secrets.KEYSTORE }}" | base64 -d > app/clock-of-clocks.jks
+          printf "%s" "${{ secrets.KEYSTORE_PROPERTIES }}" | base64 -d > app/keystore.properties
+
       - name: Build apk
         run: |
           chmod +x gradlew
-          ./gradlew assembleDebug
+          ./gradlew assembleRelease
 
       - name: Create release
         run: >
           gh release create ${{ github.ref_name }}
-          app/build/outputs/apk/debug/app-debug.apk
+          app/build/outputs/apk/release/app-release.apk
           --generate-notes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
