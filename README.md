@@ -2,7 +2,7 @@
 
 This is a Clock of Clocks built with Jetpack Compose
 
-![Clock of Clocks](https://raw.githubusercontent.com/khoa-omega/clock-of-clocks/main/demo/clock-of-clocks.mp4)
+![Clock of Clocks](https://raw.githubusercontent.com/khoa-omega/clock-of-clocks/main/demo/clock-of-clocks.gif)
 
 ## License
 
